@@ -1,0 +1,22 @@
+<div class="col-md-12 row">
+  <div class="col-md-6">
+    <select id="text-color" class="form-control">
+      <option *ngFor="let color of colors"
+              [value]="color.color"
+              [style.background-color]="color.color"
+              [id]="color.id"
+              (click)="changeTC(color.id)"
+      >{{color.name}}</option>
+    </select>
+  </div>
+  <div class="col-md-6">
+    <select id="bg-color" class="form-control">
+      <option *ngFor="let color of colors"
+              [value]="color.color"
+              [style.background-color]="color.color"
+              [id]="color.id"
+              (click)="changeBgC(color.id)"
+      >{{color.name}}</option>
+    </select>
+  </div>
+</div>

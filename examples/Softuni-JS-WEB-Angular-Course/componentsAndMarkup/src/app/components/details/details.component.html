@@ -1,0 +1,8 @@
+<div [style.color]="fontColor" [style.backgroundColor]="bgColor" [style.font-size.em]="fontSize" class="details s-padding  s-margin">
+  <p>Title: {{detailsItem.title}}</p>
+  <p>Description: {{descriptionToShow}}</p>
+  <p>Author: {{detailsItem.author}}</p>
+  <p>Image: <img src="{{detailsItem.image}}" alt="some random image from the internet"></p>
+  <button *ngIf="!shown" (click)="clickedBtn()" type="button">Show More</button>
+  <button *ngIf="shown" (click)="clickedBtn()" type="button">Hide</button>  
+</div>

@@ -1,0 +1,23 @@
+<div class="switches s-padding s-margin">
+  <label>Font size</label>
+  <button (click)="increaseFont()" type="button"><strong>+</strong></button>
+  <button (click)="decreaseFont()" type="button"><strong>-</strong></button>
+  <br>
+  <br>
+  <label>Font color</label>
+  <select (change)="fontSelected($event)">
+      <option value="black">Black</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+    </select>
+  <br>
+  <br>    
+  <label>Background color</label>
+  <select (change)="backgroundSelected($event)">
+      <option value="white">White</option>
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+      <option value="blue">Blue</option>
+    </select>
+</div>

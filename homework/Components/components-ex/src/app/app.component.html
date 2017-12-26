@@ -1,0 +1,12 @@
+<div id="container">
+  <div class="row">
+    <nav class="col-md-3" [articles]="articles" (onClicked)="onClicked($event)"></nav>
+    <div class="col-md-9">
+      <div class="col-md-12" id="options">
+        <color-picker class="col-md-6" (onChangeTC)= "onTC($event)" (onChangeBgC)="onBgC($event)"></color-picker>
+        <font-adjust class="col-md-6" (onIncreaseFont)="onClickedIFont()" (onDecreaseFont)="onClickedDFont()"></font-adjust>
+      </div>
+      <content class="col-md-12" [style.color]="color?.color" [font]="font" [article]="article"></content>
+    </div>
+  </div>
+</div>

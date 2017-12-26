@@ -1,0 +1,6 @@
+<div *ngIf="profileData">
+  <img [src]="profileData['avatar_url']" alt="Profile picture">
+  <a href="{{profileData['html_url']}}"><p>{{profileData['login']}}</p></a>
+  <p>{{profileData['name']}}</p>
+  <p>{{profileData['location']}}</p>
+</div>

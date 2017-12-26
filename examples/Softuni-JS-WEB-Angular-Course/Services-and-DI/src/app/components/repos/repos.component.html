@@ -1,0 +1,9 @@
+<div>
+  <div *ngIf="reposData">
+    <app-repo *ngFor="let repo of reposData" [repo]="repo"></app-repo>
+  </div>
+  <div *ngIf="!reposData">
+    <button type="button" (click)="loadReposData()">Repos</button>
+    <hr>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="list s-padding">
+  <ul>
+    <li *ngFor="let item of items; let i = index" class="selectable some-border s-padding s-margin" (click)="handleLiClick(i)">
+      <p><u>{{item.title}}</u></p>
+    </li>
+  </ul>
+</div>

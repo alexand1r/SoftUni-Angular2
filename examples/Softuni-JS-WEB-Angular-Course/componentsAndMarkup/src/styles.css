@@ -1,0 +1,20 @@
+.s-padding {
+    padding: 10px;
+}
+
+.s-margin {
+    margin: 10px;
+}
+
+.some-border{
+    border: 1px solid darkgrey;
+}
+
+p {
+    word-break: break-all;
+}
+
+.inline-block {
+    width: 70%;
+    display: inline-block;
+}

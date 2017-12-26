@@ -1,0 +1,7 @@
+<div id="nav">
+  <ul>
+    <li *ngFor="let article of articles" (click)="getArticle(article)">
+      {{article.title | uppercase}}
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,13 @@
+<div>
+  <div *ngIf="followersData">
+    <div *ngFor="let follower of followersData">
+      <img style="height: 200px;" [src]="follower['avatar_url']+'&s=150'" alt="">
+      <a href="{{follower['html_url']}}"><p>{{follower['login']}}</p></a>
+      <hr>
+    </div>
+  </div>
+  <div *ngIf="!followersData">
+    <button type="button" (click)="loadFollowersData()">Followers</button>
+    <hr>
+  </div>
+</div>

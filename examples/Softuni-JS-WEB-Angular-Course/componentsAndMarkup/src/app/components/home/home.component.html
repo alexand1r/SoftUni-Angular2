@@ -1,0 +1,7 @@
+<div>
+  <app-list *ngIf="listItems" [items]="listItems" (onSelected)="handleItemSelect($event)"></app-list>
+  <div class="inline-block">
+    <app-switches (fontChange)="handleFontChange($event)" (fontColorSelect)="handleFontColorSelect($event)" (bgColorSelect)="handleBgColorSelect($event)"></app-switches>
+    <app-details *ngIf="detailsItem" [detailsItem]="detailsItem" [fontSize]="fontSize" [fontColor]="fontColor" [bgColor]="bgColor"></app-details>
+  </div>
+</div>

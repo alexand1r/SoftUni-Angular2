@@ -1,0 +1,20 @@
+<div>
+
+  <a href="{{repo['html_url']}}"><p>{{repo['full_name']}}</p></a>
+  <p>{{repo['description'] || 'No description available.'}}</p>
+
+  <div *ngIf="!contributors.length">
+    <button type="button" (click)="showContributors()">Contributors</button>
+  </div>
+
+  <div *ngIf="contributors.length">
+    <p>Contributors</p>
+    <div *ngFor="let contributor of contributors; let i=index">
+      <img style="height: 50px;" [src]="contributor['avatar_url']" alt="">
+      <p>{{i+1}}. {{contributor['login']}} | {{contributor['contributions']}} contributions</p>
+      <hr>
+    </div>
+  </div>
+
+  <hr>
+</div>

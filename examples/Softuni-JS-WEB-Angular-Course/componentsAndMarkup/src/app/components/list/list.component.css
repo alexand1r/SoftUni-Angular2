@@ -1,0 +1,10 @@
+.list {
+    width: 20%;
+    display: inline-block;
+    border-radius: 3px;
+    border: 1px solid black;
+}
+
+.selectable {
+    cursor: pointer; 
+}

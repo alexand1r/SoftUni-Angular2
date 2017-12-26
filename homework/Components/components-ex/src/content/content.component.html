@@ -1,0 +1,26 @@
+<div id="content" *ngIf="checkIfExist()">
+  <div id="author">
+    <h3>Author: {{article?.author}}</h3>
+  </div>
+  <div id="image">
+    <img src="{{article?.image}}" *ngIf="showHideImg === true" width="180px" height="120px" />
+ </div>
+  <div id="desc">
+    <p [style.font-size]="font + 'px'">
+      {{article?.description.substring(0, increase)}}
+    </p>
+  </div>
+  <div id="btn-more-div">
+    <button
+      id="btn-more"
+      *ngIf="showHide === true"
+      class="btn btn-success"
+      (click)="increaseText()"
+    >Read More</button>
+    <button
+      id="btn-sh-img"
+      class="btn btn-success"
+      (click)="showHideImage()"
+    >Show/Hide Image</button>
+  </div>
+</div>
